@@ -35,6 +35,10 @@ export function PlayerPart(props: PlayerPartProps) {
 
   const inControl = !enabled || isHost;
 
+  // backUrl prop is required for backwards compatibility with other components
+  // but we're only using backlink from URL parameters for rendering the back link
+  const _ = props.backUrl;
+
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
   const isPWA = window.matchMedia("(display-mode: standalone)").matches;
 
@@ -119,20 +123,44 @@ export function PlayerPart(props: PlayerPartProps) {
       <Player.TopControls show={showTargets}>
         <div className="grid grid-cols-[1fr,auto] xl:grid-cols-3 items-center">
           <div className="flex space-x-3 items-center">
-            <Player.BackLink url={props.backUrl} />
-            <span className="text mx-3 text-type-secondary">/</span>
+            {(() => {
+              const backlink = new URLSearchParams(window.location.search).get(
+                "backlink",
+              );
+
+              // Only show backlink if it comes from URL parameter, and strip any quotes
+              if (backlink) {
+                // Remove any surrounding quotes from the URL
+                const cleanUrl = backlink.replace(/^["'](.*)["']$/, "$1");
+
+                return (
+                  <>
+                    <Player.BackLink url={cleanUrl} />
+                    <span className="text mx-3 text-type-secondary">/</span>
+                  </>
+                );
+              }
+              return null;
+            })()}
             <Player.Title />
 
-            <Player.InfoButton />
-
-            <Player.BookmarkButton />
+            {new URLSearchParams(window.location.search).get("allinone") ===
+              "true" && <Player.InfoButton />}
           </div>
           <div className="text-center hidden xl:flex justify-center items-center">
             <Player.EpisodeTitle />
           </div>
-          <div className="hidden sm:flex items-center justify-end">
-            <BrandPill />
-          </div>
+          {new URLSearchParams(window.location.search).get("logo") !==
+            "false" && (
+            <a
+              href="https://pstream.mov"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden sm:flex items-center justify-end"
+            >
+              <BrandPill />
+            </a>
+          )}
           <div className="flex sm:hidden items-center justify-end">
             {status === playerStatus.PLAYING ? (
               <>
@@ -170,11 +198,16 @@ export function PlayerPart(props: PlayerPartProps) {
             ) : null}
           </Player.LeftSideControls>
           <div className="flex items-center space-x-3">
-            <Player.Episodes inControl={inControl} />
-            <Player.SkipEpisodeButton
-              inControl={inControl}
-              onChange={props.onMetaChange}
-            />
+            {new URLSearchParams(window.location.search).get("allinone") ===
+              "true" && (
+              <>
+                <Player.Episodes inControl={inControl} />
+                <Player.SkipEpisodeButton
+                  inControl={inControl}
+                  onChange={props.onMetaChange}
+                />
+              </>
+            )}
             {status === playerStatus.PLAYING ? (
               <>
                 <Player.Pip />
@@ -207,7 +240,8 @@ export function PlayerPart(props: PlayerPartProps) {
             {!isPWA && !isIOS && status === playerStatus.PLAYING && (
               <Player.Pip />
             )}
-            <Player.Episodes inControl={inControl} />
+            {new URLSearchParams(window.location.search).get("allinone") ===
+              "true" && <Player.Episodes inControl={inControl} />}
             {status === playerStatus.PLAYING ? (
               <div className="hidden ssm:block">
                 <Player.Captions />
@@ -237,11 +271,14 @@ export function PlayerPart(props: PlayerPartProps) {
       <Player.SpeedChangedPopout />
       <UnreleasedEpisodeOverlay />
 
-      <Player.NextEpisodeButton
-        controlsShowing={showTargets}
-        onChange={props.onMetaChange}
-        inControl={inControl}
-      />
+      {new URLSearchParams(window.location.search).get("allinone") ===
+        "true" && (
+        <Player.NextEpisodeButton
+          controlsShowing={showTargets}
+          onChange={props.onMetaChange}
+          inControl={inControl}
+        />
+      )}
 
       <SkipIntroButton
         controlsShowing={showTargets}
