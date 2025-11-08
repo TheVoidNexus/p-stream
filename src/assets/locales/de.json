@@ -646,7 +646,7 @@
   },
   "player": {
     "back": {
-      "default": "Zurück zur Homepage",
+      "default": "Zurück zur Startseite",
       "short": "Zurück"
     },
     "casting": {
@@ -1088,7 +1088,7 @@
     "preferences": {
       "title": "Einstellungen",
       "language": "Sprache der Anwendung",
-      "languageDescription": "Sprache, die auf die gesamte Anwendung angewendet wird, nur die englische Version hat alberne Sprüche 🙁.",
+      "languageDescription": "Sprache, die auf die gesamte Anwendung angewendet wird.",
       "thumbnail": "Vorschaubilder generieren",
       "thumbnailDescription": "Meistens haben Videos keine Vorschaubilder. Du kannst diese Einstellung aktivieren, um sie spontan zu generieren, aber sie können dein Video verlangsamen.",
       "thumbnailLabel": "Vorschaubilder generieren",
