@@ -52,16 +52,16 @@ export function DetailsInfo({
     if (!runtime) return null;
     const now = new Date();
     const endTime = new Date(now.getTime() + runtime * 60000);
-    return endTime.toLocaleTimeString("en-US", {
+    return endTime.toLocaleTimeString("de-DE", {
       hour: "numeric",
       minute: "2-digit",
-      hour12: true,
+      hour12: false,
     });
   };
 
   const formatDate = (dateString?: string) => {
     if (!dateString) return null;
-    return new Date(dateString).toLocaleDateString("en-US", {
+    return new Date(dateString).toLocaleDateString("de-DE", {
       year: "numeric",
       month: "long",
       day: "numeric",

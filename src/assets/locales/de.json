@@ -136,7 +136,7 @@
       "body": "Verwende die Option „Anpassen“ in den Untertiteleinstellungen oder tippe auf [ und ] auf deiner Tastatur, um sie anzupassen. Du kannst auch deine eigene Untertiteldatei hochladen.",
       "section": "language"
     },
-    "title": "über P-Stream und FAQ (^▽^)"
+    "title": "Über P-Stream und FAQ (^▽^)"
   },
   "actions": {
     "copied": "Kopiert",
@@ -226,7 +226,7 @@
   "global": {
     "name": "P-Stream",
     "pages": {
-      "about": "über und FAQ",
+      "about": "Über und FAQ",
       "legal": "Rechtliches / DMCA",
       "discover": "Entdecken",
       "support": "Hilfe",
@@ -284,10 +284,9 @@
       "showAll": "Alle anzeigen",
       "groups": {
         "dropdown": {
-          "placeholderButton": "Zur Gruppe hinzufügen",
+          "placeholderButton": "Zu Gruppe hinzufügen",
           "empty": "Noch keine Gruppen",
-          "addButton": "Hinzufügen",
-          "removeFromGroup": "Aus der Gruppe entfernen",
+          "removeFromGroup": "Aus Gruppe entfernen",
           "removeAll": "Alle entfernen"
         },
         "reorder": {
@@ -297,7 +296,27 @@
           "description": "Ziehe deine Lesezeichengruppen per Drag & Drop in die gewünschte Reihenfolge",
           "cancel": "Abbrechen",
           "save": "Speichern"
+        },
+        "editGroup": {
+          "title": "Gruppe bearbeiten",
+          "description": "Gruppenname und Icon bearbeiten",
+          "cancel": "Abbrechen",
+          "save": "Speichern",
+          "affectsBookmarks": "Dies betrifft {{count}} Lesezeichen",
+          "nameLabel": "Gruppenname",
+          "namePlaceholder": "Gruppenname eingeben"
         }
+      },
+      "edit": {
+        "title": "Lesezeichen bearbeiten",
+        "description": "Details für dieses Lesezeichen bearbeiten",
+        "cancel": "Abbrechen",
+        "save": "Speichern",
+        "groupsLabel": "Gruppen",
+        "titleLabel": "Titel",
+        "titlePlaceholder": "Titel eingeben",
+        "yearLabel": "Jahr",
+        "yearPlaceholder": "Jahr eingeben"
       }
     },
     "continueWatching": {
@@ -408,7 +427,7 @@
     "tmdb": "Auf TMDB ansehen",
     "imdb": "Auf IMDb ansehen",
     "episodes": "Folgen",
-    "seasons": "Staffel/n",
+    "seasons": "Staffeln",
     "season": "Staffel",
     "episode": "Folge",
     "airs": "Wird ausgestrahlt",
@@ -933,6 +952,8 @@
     },
     "account": {
       "accountDetails": {
+        "nicknameLabel": "Spitzname",
+        "nicknamePlaceholder": "Spitzname eingeben",
         "deviceNameLabel": "Gerätename",
         "deviceNamePlaceholder": "Persönliches Handy",
         "editProfile": "Bearbeiten",
@@ -940,7 +961,7 @@
       },
       "admin": {
         "title": "Admin-Panel",
-        "text": "überprüfe den Zustand von P-Stream."
+        "text": "Überprüfe den Zustand von P-Stream."
       },
       "actions": {
         "delete": {
@@ -1115,7 +1136,10 @@
       "embedOrderEnableLabel": "Benutzerdefinierte Embed-Reihenfolge",
       "manualSource": "Manuelle Quellenauswahl",
       "manualSourceDescription": "Erfordert die Auswahl einer Quelle vor dem Scrapen. Deaktiviert die automatische Quellenauswahl und öffnet die Quellenauswahl beim Start der Wiedergabe.",
-      "manualSourceLabel": "Manuelle Quellenauswahl"
+      "manualSourceLabel": "Manuelle Quellenauswahl",
+      "lastSuccessfulSource": "Letzte verwendete Quelle",
+      "lastSuccessfulSourceDescription": "Automatisch die Quelle priorisieren, die für die vorherige Folge erfolgreich Inhalt bereitgestellt hat. Dies hilft, die Kontinuität beim Schauen von Serien zu gewährleisten.",
+      "lastSuccessfulSourceEnableLabel": "Letzte verwendete Quelle"
     },
     "reset": "Zurücksetzen",
     "save": "Speichern",
@@ -1262,8 +1286,8 @@
     "withCount": "Mit {{count}} anderen",
     "isHost": "Host auf <0>{{backendName}}</0>",
     "isGuest": "Schaust als Gast auf <0>{{backendName}}</0>",
-    "hosting": "Hostest",
-    "watching": "Schaust",
+    "hosting": "Du hostest",
+    "watching": "Du schaust",
     "syncing": "Synchronisiere...",
     "behindHost": "{{seconds}} Sekunden hinter dem Host",
     "aheadOfHost": "{{seconds}} Sekunden vor dem Host",
@@ -1272,9 +1296,9 @@
     "shareCode": "Teile diesen Code mit Freunden (klicken, um den Link zu kopieren)",
     "connectedAsGuest": "Als Gast mit der Watch Party verbunden",
     "hostParty": "Watch Party hosten",
-    "joinParty": "Watch Party beitreten",
-    "viewers": "Zuschauer ({{count}})",
-    "copyCode": "Klicken zum Kopieren",
+    "joinParty": "Watch Party joinen",
+    "viewers": "({{count}}) Zuschauer",
+    "copyCode": "Klicke zum Kopieren",
     "join": "Beitreten",
     "cancel": "Abbrechen",
     "save": "Speichern",
