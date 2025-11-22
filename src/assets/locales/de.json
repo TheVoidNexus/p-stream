@@ -539,7 +539,7 @@
       "offline": "überprüfe deine Internetverbindung"
     },
     "menu": {
-      "about": "über und FAQ",
+      "about": "Über und FAQ",
       "logout": "Abmelden",
       "register": "Mit der Cloud synchronisieren",
       "settings": "Einstellungen",
@@ -765,6 +765,8 @@
       },
       "subtitles": {
         "customChoice": "Datei ablegen oder hochladen",
+        "pasteChoice": "Untertiteldaten einfügen",
+        "doubleClickToCopy": "Doppelklick zum Kopieren der Untertiteldaten",
         "customizeLabel": "Anpassen",
         "previewLabel": "Untertitel-Vorschau:",
         "offChoice": "Aus",
@@ -950,6 +952,9 @@
     "search": {
       "placeholder": "Einstellungen durchsuchen..."
     },
+    "all": {
+      "title": "Alle Einstellungen"
+    },
     "account": {
       "accountDetails": {
         "nicknameLabel": "Spitzname",
@@ -1023,7 +1028,7 @@
         "grape": "Traube",
         "spiderman": "Spiderman",
         "forest": "Wald",
-        "wolverine": "",
+        "wolverine": "Wolverine",
         "popsicle": "Eis am Stiel",
         "hulk": "Hulk",
         "autumn": "Herbst",
@@ -1083,7 +1088,7 @@
         },
         "redoSetup": "Einrichtung wiederholen",
         "successStatus": {
-          "description": "Alles ist bereit, damit du anfangen kannst, deine LieblingsVideos anzusehen. (๑>◡<๑)",
+          "description": "Alles ist bereit, damit du anfangen kannst, deine Lieblingsvideos anzusehen. (๑>◡<๑)",
           "title": "Alles ist eingerichtet!"
         },
         "unsetStatus": {
@@ -1159,15 +1164,17 @@
     },
     "subtitles": {
       "backgroundLabel": "Hintergrunddeckkraft",
-      "backgroundBlurLabel": "Hintergrundunschärfe",
+      "backgroundBlurEnabledLabel": "Hintergrundunschärfe",
+      "backgroundBlurEnabledDescription": "Das Deaktivieren der Hintergrundunschärfe für Untertitel kann einige Flackerprobleme beheben",
+      "backgroundBlurLabel": "Intensität der Hintergrundunschärfe",
       "colorLabel": "Farbe",
       "previewQuote": "überzeugt davon, dass das Leben sinnlos ist, fehlt mir der Mut meiner überzeugung.",
       "textSizeLabel": "Textgröße",
       "title": "Untertitel",
       "textBoldLabel": "Fetter Text",
       "verticalPositionLabel": "Vertikale Position",
-      "default": "Standard",
-      "low": "Niedrig",
+      "high": "Hoch",
+      "low": "Standard",
       "textStyle": {
         "title": "Textstil",
         "default": "Standard",
